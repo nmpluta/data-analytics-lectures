@@ -12,14 +12,9 @@ model {
   mu ~ normal(170, 10);
   sigma ~ normal(15, 5);
 
-  for (i in 1:N) {
-    heights[i] ~ normal(mu, sigma);
-  }
+  heights ~ normal(mu, sigma);
 }
 
 generated quantities {
-  real height_sim[N];
-  for (i in 1:N) {
-    height_sim[i] = normal_rng(mu, sigma);
-  }
+  real height_fit = normal_rng(mu, sigma);
 }
