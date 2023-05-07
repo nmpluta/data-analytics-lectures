@@ -1,6 +1,6 @@
 data {
-  int<lower=0> N;           // number of observations
-  real<lower=0> weight[N];  // observed weight of each person
+  int<lower=0> N;          // number of observations
+  real weight[N];          // observed weight of each person
   real<lower=0> height[N]; // observed height of each person
 }
 

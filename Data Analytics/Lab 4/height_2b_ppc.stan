@@ -1,6 +1,6 @@
 data {
   int<lower=0> N; // number of observations
-  real<lower=0> weight[N]; // weight of each person
+  real weight[N]; // weight of each person
 }
 
 generated quantities {
